@@ -1,7 +1,19 @@
 import { SchemaTypeDefinition } from "sanity";
-import { Blog } from "./blog";
+import { Blog, ImageSection, TextSection } from "./blog";
+import { Header } from "./header";
+import { Footer } from "./footer";
+import { BlogCategory } from "./blog-category";
+import { Author } from "./author";
 
-export const schemaTypes = [Blog];
+export const schemaTypes = [
+  Blog,
+  Header,
+  Footer,
+  BlogCategory,
+  Author,
+  TextSection,
+  ImageSection,
+];
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: schemaTypes,
