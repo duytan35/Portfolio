@@ -10,21 +10,18 @@ const post = {
   },
   categories: [
     {
-      title: "Time Travel",
+      name: "Time Travel",
     },
     {
-      title: "Tech",
+      name: "Tech",
     },
   ],
   image: "/post-image.jpeg",
   slug: "/back-path-to-the-future",
+  sections: [],
 };
 
-export default async function Blogs({
-  searchParams,
-}: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}) {
+export default async function Blogs() {
   return (
     <div className="w-full flex flex-col gap-10">
       <div className="relative w-full h-[600px]">
@@ -40,10 +37,10 @@ export default async function Blogs({
             <div className="flex gap-5">
               {post.categories.map((category) => (
                 <span
-                  key={category.title}
+                  key={category.name}
                   className="text-sm font-medium rounded-md bg-[#4B6BFB] p-[4px_10px]"
                 >
-                  {category.title}
+                  {category.name}
                 </span>
               ))}
             </div>

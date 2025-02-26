@@ -18,10 +18,10 @@ export default function BlogCard({ blog }: { blog: Blog }) {
         <div className="flex gap-2">
           {blog.categories.map((category) => (
             <span
-              key={category.title}
+              key={category.name}
               className="text-sm font-medium rounded-md text-[#4B6BFB] bg-[#4b6bfb0d] p-[3px_8px]"
             >
-              {category.title}
+              {category.name}
             </span>
           ))}
         </div>

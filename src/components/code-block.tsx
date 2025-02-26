@@ -39,11 +39,13 @@ const CodeBlock = ({ code, language, filename }: CodeBlockProps) => {
           style={tomorrowNightBright}
           customStyle={{
             padding: "1em",
-            marginBottom: "2em",
+            marginBottom: "20px",
             background: "#222222",
             fontSize: "14px",
             borderBottomLeftRadius: "6px",
             borderBottomRightRadius: "6px",
+            borderTopLeftRadius: filename ? "0" : "6px",
+            borderTopRightRadius: filename ? "0" : "6px",
           }}
         >
           {code.trim()}

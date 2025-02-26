@@ -35,3 +35,63 @@ body {
     transform: translateY(0);
   }
 }
+
+/* Heading Styles For Blog Sections */
+.section-renderer h1,
+.section-renderer h2,
+.section-renderer h3,
+.section-renderer h4,
+.section-renderer h5,
+.section-renderer h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  color: #222;
+}
+
+.section-renderer h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.section-renderer h2 {
+  font-size: 2rem;
+}
+
+.section-renderer h3 {
+  font-size: 1.75rem;
+}
+
+.section-renderer h4 {
+  font-size: 1.5rem;
+}
+
+.section-renderer h5 {
+  font-size: 1.25rem;
+}
+
+.section-renderer h6 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .section-renderer h1 {
+    font-size: 2rem;
+  }
+  .section-renderer h2 {
+    font-size: 1.75rem;
+  }
+  .section-renderer h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.section-renderer a {
+  color: #0070f3;
+  text-decoration: none;
+  border-bottom: 1px solid #0070f3;
+}
