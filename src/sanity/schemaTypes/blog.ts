@@ -42,6 +42,23 @@ export const ImageSection = defineField({
   ],
 });
 
+export const CodeSection = defineField({
+  name: "CodeSection",
+  title: "Code Section",
+  type: "object",
+  fields: [
+    defineField({
+      name: "code",
+      title: "Code",
+      type: "code",
+      options: {
+        language: "typescript",
+        withFilename: true,
+      },
+    }),
+  ],
+});
+
 export const Blog = defineType({
   name: "Blog",
   title: "Blogs",
@@ -50,6 +67,13 @@ export const Blog = defineType({
     defineField({
       name: "title",
       title: "Title",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
+
+    defineField({
+      name: "slug",
+      title: "Slug",
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
@@ -86,6 +110,9 @@ export const Blog = defineType({
         },
         {
           type: "ImageSection",
+        },
+        {
+          type: "CodeSection",
         },
       ],
     }),

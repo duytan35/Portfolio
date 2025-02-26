@@ -12,6 +12,7 @@ import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
 import { apiVersion, dataset, projectId } from "./src/sanity/env";
 import { schema } from "./src/sanity/schemaTypes";
+import { codeInput } from "@sanity/code-input";
 
 export default defineConfig({
   basePath: "/admin-studio",
@@ -28,5 +29,6 @@ export default defineConfig({
         },
       },
     }),
+    codeInput(),
   ],
 });

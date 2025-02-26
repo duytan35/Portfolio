@@ -1,5 +1,5 @@
 import { SchemaTypeDefinition } from "sanity";
-import { Blog, ImageSection, TextSection } from "./blog";
+import { Blog, CodeSection, ImageSection, TextSection } from "./blog";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { BlogCategory } from "./blog-category";
@@ -13,6 +13,7 @@ export const schemaTypes = [
   Author,
   TextSection,
   ImageSection,
+  CodeSection,
 ];
 
 export const schema: { types: SchemaTypeDefinition[] } = {

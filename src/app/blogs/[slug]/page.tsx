@@ -1,3 +1,6 @@
+import CodeBlock from "@/components/code-block";
+import { fetchBlogDetail } from "@/services";
+
 export default async function BlogDetail({
   params,
 }: {
@@ -5,5 +8,16 @@ export default async function BlogDetail({
 }) {
   const { slug } = await params;
 
-  return <div>Blog detail {slug}</div>;
+  const blog = await fetchBlogDetail(slug);
+
+  return (
+    <div>
+      Blog detail
+      {/* <CodeBlock
+        language={blog.myCodeField.language}
+        code={blog.myCodeField.code}
+        filename={blog.myCodeField.filename}
+      /> */}
+    </div>
+  );
 }
