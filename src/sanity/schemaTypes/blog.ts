@@ -83,6 +83,12 @@ export const Blog = defineType({
       type: "string",
     }),
     defineField({
+      name: "image",
+      title: "Image",
+      type: "image",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: "author",
       title: "Author",
       type: "reference",
