@@ -7,7 +7,7 @@ export default function BlogCard({ blog }: { blog: Blog }) {
     <div className="flex flex-col gap-4">
       <div className="w-full h-[240px] relative">
         <Image
-          src="/post-image.jpeg"
+          src={blog.image}
           alt="Post title"
           layout="fill"
           objectFit="cover"
@@ -25,12 +25,14 @@ export default function BlogCard({ blog }: { blog: Blog }) {
             </span>
           ))}
         </div>
-        <Link href={blog.slug} className="flex gap-2">
+        <Link href={`/blogs${blog.slug}`} className="flex gap-2">
           <h2 className="text-xl font-medium flex-1">{blog.title}</h2>
           {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
           <img src="/arrow-up-right.svg" className="w-5 h-7" />
         </Link>
-        <p className="text-[#667085] text-sm">{blog.description}</p>
+        <p className="text-[#667085] text-sm tracking-[-0.2px]">
+          {blog.description}
+        </p>
         <div className="flex gap-5 items-center text-sm text-[#181A2A]">
           <div className="font-medium">{blog.author.name}</div>
           <div>August 20, 2024</div>

@@ -25,6 +25,7 @@ export interface Blog {
   title: string;
   slug: string;
   description?: string;
+  priority?: boolean;
   image: string;
   author: {
     name: string;

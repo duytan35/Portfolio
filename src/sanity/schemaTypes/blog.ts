@@ -83,6 +83,11 @@ export const Blog = defineType({
       type: "string",
     }),
     defineField({
+      name: "priority",
+      title: "Priority",
+      type: "boolean",
+    }),
+    defineField({
       name: "image",
       title: "Image",
       type: "image",
