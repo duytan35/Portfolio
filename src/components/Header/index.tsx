@@ -1,7 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import Search from "../Search";
+import { fetchBlogs } from "@/services/blogs";
 
 export default async function Header() {
+  const blogs = await fetchBlogs();
+
+  const briefBlogs = blogs.map((blog) => ({
+    title: blog.title,
+    description: blog.description,
+    image: blog.image,
+    slug: blog.slug,
+  }));
+
   return (
     <header className="w-full max-w-screen-xl flex justify-between items-center py-8 px-4 sm:px-6">
       <div className="min-w-[200px]">
@@ -15,20 +26,7 @@ export default async function Header() {
         <Link href="#">Contact</Link>
         <Link href="#">About</Link>
       </div>
-      <div className="w-[200px] flex items-center gap-5">
-        <div className="relative bg-[#F4F4F5] flex-1 rounded-[5px]">
-          <input
-            className="p-[8px_32px_8px_16px] bg-transparent max-w-[180px] border-none outline-none"
-            placeholder="Search"
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/search-outline.svg"
-            alt="Search outline"
-            className="absolute top-1/2 right-3 transform -translate-y-1/2"
-          />
-        </div>
-      </div>
+      <Search blogs={briefBlogs} />
     </header>
   );
 }
