@@ -4,7 +4,6 @@ import { Work_Sans } from "next/font/google";
 import { SanityLive } from "@/sanity/lib/live";
 import { draftMode } from "next/headers";
 import { VisualEditing } from "next-sanity";
-import MainLayout from "@/components/MainLayout";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -25,7 +24,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${workSans.variable} ${workSans.variable}`}>
-        <MainLayout>{children}</MainLayout>
+        {children}
         <SanityLive />
         {(await draftMode()).isEnabled && <VisualEditing />}
       </body>

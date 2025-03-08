@@ -53,4 +53,7 @@ export interface Footer {
   email: string;
   phone: string;
   quickLinks: NavLink[];
+  linkdin: string;
+  github: string;
+  facebook: string;
 }

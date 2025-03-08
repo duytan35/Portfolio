@@ -23,7 +23,10 @@ export default async function Home() {
               and curiosity!
             </p>
             <div className="flex flex-col gap-2 sm:flex-row">
-              <button className="inline-flex items-center justify-center rounded-md bg-black px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
+              <Link
+                href={`blogs${blogs[0].slug}`}
+                className="inline-flex items-center justify-center rounded-md bg-black px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+              >
                 Read Latest Post
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -40,10 +43,13 @@ export default async function Home() {
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
-              </button>
-              <button className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800">
+              </Link>
+              <Link
+                href="/blogs"
+                className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800"
+              >
                 Browse All
-              </button>
+              </Link>
             </div>
           </div>
           <div className="relative aspect-video overflow-hidden rounded-lg">

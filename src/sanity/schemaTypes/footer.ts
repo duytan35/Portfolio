@@ -46,5 +46,23 @@ export const Footer = defineType({
         },
       ],
     }),
+    defineField({
+      name: "linkdin",
+      title: "Linkdin",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "github",
+      title: "GitHub",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "facebook",
+      title: "Facebook",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
   ],
 });

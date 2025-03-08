@@ -12,7 +12,10 @@ export const fetchFooter = async (): Promise<Footer> => {
         quickLinks[] {
           title,
           slug
-        }
+        },
+        github,
+        linkdin,
+        facebook
       }
     `,
   });

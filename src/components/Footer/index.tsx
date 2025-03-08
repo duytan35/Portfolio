@@ -1,6 +1,7 @@
 import { fetchAllCategories } from "@/services/allCategories";
 import { fetchFooter } from "@/services/footer";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function Footer() {
   const footer = await fetchFooter();
@@ -8,7 +9,7 @@ export default async function Footer() {
 
   return (
     <footer className="bg-[#F6F6F7] w-full flex justify-center">
-      <div className="max-w-screen-xl py-12 px-4 sm:px-6 w-full">
+      <div className="max-w-screen-xl pt-10 pb-0 px-4 sm:px-6 w-full">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="flex-1">
             <h3 className="mb-4 text-lg font-semibold">About</h3>
@@ -76,6 +77,40 @@ export default async function Footer() {
                 Subscribe
               </button>
             </form>
+          </div>
+        </div>
+        <div className="border-t border-[#E4E4E7] w-full text-center py-4 mt-4 flex justify-between">
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()} All rights reserved.
+          </p>
+          <div className="flex gap-3">
+            <Link href={footer.linkdin}>
+              <Image
+                src="/linkdin.svg"
+                className="w-6 h-6"
+                width={24}
+                height={24}
+                alt="linkdin"
+              />
+            </Link>
+            <Link href={footer.github}>
+              <Image
+                src="/github.svg"
+                className="w-6 h-6"
+                width={24}
+                height={24}
+                alt="github"
+              />
+            </Link>
+            <Link href={footer.facebook}>
+              <Image
+                src="/fb.svg"
+                className="w-6 h-6"
+                width={24}
+                height={24}
+                alt="facebook"
+              />
+            </Link>
           </div>
         </div>
       </div>
