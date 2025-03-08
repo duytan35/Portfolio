@@ -58,7 +58,7 @@ export default async function Blogs() {
         </div>
       )}
       <div className="flex flex-col gap-8 pb-8">
-        <h1 className="text-2xl text-[#181A2A] font-medium">All blog posts</h1>
+        <h1 className="text-2xl text-[#181A2A] font-medium">All posts</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
           {blogs
             .filter((b) => b.slug !== priorityBlog?.slug)

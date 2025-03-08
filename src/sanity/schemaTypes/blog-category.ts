@@ -11,5 +11,11 @@ export const BlogCategory = defineType({
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: "slug",
+      title: "Slug",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
   ],
 });

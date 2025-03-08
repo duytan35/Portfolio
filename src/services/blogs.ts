@@ -20,6 +20,7 @@ export const fetchBlogs = async (): Promise<Blog[]> => {
       },
       "categories": categories[]->{
         name,
+        slug
       },
     }`,
   });

@@ -44,7 +44,7 @@ export function SectionRenderer({
   sections: (TextSection | ImageSection | CodeSection)[];
 }) {
   return (
-    <div className="section-renderer">
+    <div className="section-renderer tracking-wide">
       {sections.map((section, index) => {
         switch (section._type) {
           case "TextSection":

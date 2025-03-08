@@ -14,6 +14,7 @@ const workSans = Work_Sans({
 export const metadata: Metadata = {
   title: "Devstack Blogs",
   description: "A blog about web development",
+  icons: "/icon.png",
 };
 
 export default async function RootLayout({

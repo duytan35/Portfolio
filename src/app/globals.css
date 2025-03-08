@@ -95,3 +95,27 @@ body {
   text-decoration: none;
   border-bottom: 1px solid #0070f3;
 }
+
+.hover-underline-animation {
+  display: block;
+  position: relative;
+  width: fit-content;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #171717;
+  transition: transform 0.25s ease-out;
+  transform-origin: bottom right;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

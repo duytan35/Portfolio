@@ -12,7 +12,7 @@ export default async function BlogDetail({
   const blog = await fetchBlogDetail(`/${slug}/`);
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center pt-4 pb-12">
       <div className="flex flex-col gap-2 max-w-[800px] w-full">
         <div className="flex flex-col gap-4">
           <div className="flex gap-2 text-white">

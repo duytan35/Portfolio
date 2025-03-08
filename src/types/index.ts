@@ -30,8 +30,27 @@ export interface Blog {
   author: {
     name: string;
   };
-  categories: {
-    name: string;
-  }[];
+  categories: BlogCategory[];
   sections: (TextSection | ImageSection | CodeSection)[];
+}
+
+export interface BlogCategory {
+  name: string;
+  slug: string;
+}
+
+export interface Header {
+  navLinks: NavLink[];
+}
+
+export interface NavLink {
+  title: string;
+  slug: string;
+}
+
+export interface Footer {
+  about: string;
+  email: string;
+  phone: string;
+  quickLinks: NavLink[];
 }

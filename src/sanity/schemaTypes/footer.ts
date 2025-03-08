@@ -24,5 +24,27 @@ export const Footer = defineType({
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: "quickLinks",
+      title: "Quick Links",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            defineField({
+              name: "title",
+              title: "Title",
+              type: "string",
+            }),
+            defineField({
+              name: "slug",
+              title: "Slug",
+              type: "string",
+            }),
+          ],
+        },
+      ],
+    }),
   ],
 });

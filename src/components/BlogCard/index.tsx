@@ -11,7 +11,7 @@ export default function BlogCard({ blog }: { blog: Blog }) {
           alt="Post title"
           layout="fill"
           objectFit="cover"
-          className="rounded-md"
+          className="rounded-md object-cover"
         />
       </div>
       <div className="flex flex-col gap-1">
