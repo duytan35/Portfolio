@@ -5,6 +5,7 @@ import { Footer } from "./footer";
 import { BlogCategory } from "./blog-category";
 import { Author } from "./author";
 import { About } from "./about";
+import { Subscriber } from "./subscriber";
 
 export const schemaTypes = [
   Blog,
@@ -16,6 +17,7 @@ export const schemaTypes = [
   ImageSection,
   CodeSection,
   About,
+  Subscriber,
 ];
 
 export const schema: { types: SchemaTypeDefinition[] } = {

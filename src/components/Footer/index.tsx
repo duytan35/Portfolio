@@ -2,6 +2,7 @@ import { fetchAllCategories } from "@/services/allCategories";
 import { fetchFooter } from "@/services/footer";
 import Link from "next/link";
 import Image from "next/image";
+import { SubscribeForm } from "./SubscribeForm";
 
 export default async function Footer() {
   const footer = await fetchFooter();
@@ -58,26 +59,7 @@ export default async function Footer() {
             </div>
           </div>
 
-          <div className="flex-1">
-            <h3 className="mb-4 text-lg font-semibold">Weekly Newsletter</h3>
-            <p className="mb-4 text-sm">
-              Get blog articles and offers via email
-            </p>
-            <form className="space-y-2">
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full px-3 py-2 text-sm border rounded-md focus:outline-none focus:ring-1 focus:ring-slate-600"
-                required
-              />
-              <button
-                type="submit"
-                className="w-full inline-flex items-center justify-center rounded-md bg-black px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
+          <SubscribeForm />
         </div>
         <div className="border-t border-[#E4E4E7] w-full text-center py-4 mt-4 flex justify-between">
           <p className="text-sm">

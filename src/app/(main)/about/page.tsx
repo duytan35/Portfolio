@@ -65,7 +65,7 @@ export default async function About() {
           href={about.pdfCVFile}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition-colors"
+          className="flex items-center gap-2 px-6 py-3 bg-gray-200 text-[#171717] rounded-md hover:bg-gray-300 transition-colors"
         >
           <FaFileAlt size={18} />
           <span>View my CV</span>
