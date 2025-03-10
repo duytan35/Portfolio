@@ -57,3 +57,18 @@ export interface Footer {
   github: string;
   facebook: string;
 }
+
+export interface About {
+  firstDescription: string;
+  secondDescription: string;
+  avatar: string;
+  experience: ExperienceItem[];
+  pdfCVFile: string;
+}
+
+export interface ExperienceItem {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+}

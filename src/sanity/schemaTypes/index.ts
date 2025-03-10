@@ -4,6 +4,7 @@ import { Header } from "./header";
 import { Footer } from "./footer";
 import { BlogCategory } from "./blog-category";
 import { Author } from "./author";
+import { About } from "./about";
 
 export const schemaTypes = [
   Blog,
@@ -14,6 +15,7 @@ export const schemaTypes = [
   TextSection,
   ImageSection,
   CodeSection,
+  About,
 ];
 
 export const schema: { types: SchemaTypeDefinition[] } = {

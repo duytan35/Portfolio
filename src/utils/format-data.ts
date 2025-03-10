@@ -9,7 +9,11 @@ export function formatData<T>(input: any): T {
     }
     return input.map(formatData) as T;
   } else if (typeof input === "object" && input !== null) {
-    if (input.asset && input.asset._type === "sanity.imageAsset") {
+    if (
+      input.asset &&
+      (input.asset._type === "sanity.imageAsset" ||
+        input.asset._type === "sanity.fileAsset")
+    ) {
       return input.asset.url;
     }
     return Object.fromEntries(
