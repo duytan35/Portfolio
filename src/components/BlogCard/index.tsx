@@ -19,7 +19,7 @@ export default function BlogCard({ blog }: { blog: Blog }) {
           {blog.categories.map((category) => (
             <span
               key={category.name}
-              className="text-sm font-medium rounded-md text-[#4B6BFB] bg-[#4b6bfb0d] p-[3px_8px]"
+              className="text-sm font-medium rounded-md text-gray-700 bg-gray-100 p-[3px_8px]"
             >
               {category.name}
             </span>
@@ -27,8 +27,13 @@ export default function BlogCard({ blog }: { blog: Blog }) {
         </div>
         <Link href={`/blogs${blog.slug}`} className="flex gap-2">
           <h2 className="text-xl font-medium flex-1">{blog.title}</h2>
-          {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
-          <img src="/arrow-up-right.svg" className="w-5 h-7" />
+          <Image
+            src="/arrow-up-right.svg"
+            className="w-5 h-7"
+            alt="arrow-svg"
+            width={20}
+            height={28}
+          />
         </Link>
         <p className="text-[#667085] text-sm tracking-[-0.2px]">
           {blog.description}

@@ -15,11 +15,11 @@ export default async function BlogDetail({
     <div className="flex justify-center pt-4 pb-12">
       <div className="flex flex-col gap-2 max-w-[800px] w-full">
         <div className="flex flex-col gap-4">
-          <div className="flex gap-2 text-white">
+          <div className="flex gap-2">
             {blog.categories.map((category) => (
               <span
                 key={category.name}
-                className="text-sm font-medium rounded-md bg-[#4B6BFB] p-[4px_10px]"
+                className="text-sm font-medium rounded-md text-gray-700 bg-gray-100 p-[4px_10px]"
               >
                 {category.name}
               </span>
